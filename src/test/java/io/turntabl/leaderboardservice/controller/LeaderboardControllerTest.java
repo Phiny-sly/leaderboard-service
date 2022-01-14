@@ -40,5 +40,7 @@ class LeaderboardControllerTest {
         mockMvc.perform(get("/v1/leaderboard"))
                 .andExpect(status().isOk())
                 .andExpect(result -> assertThat(result.getResponse().getContentAsString()).isEqualTo(objectMapper.writeValueAsString(expectedResponse)));
+
+
     }
 }
