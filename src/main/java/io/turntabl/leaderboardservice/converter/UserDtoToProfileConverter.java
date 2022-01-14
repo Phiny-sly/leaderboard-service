@@ -22,6 +22,7 @@ public class UserDtoToProfileConverter implements Converter<UserDto, Profile> {
         return new Profile()
                 .setId(source.getUsername())
                 .setClan(source.getClan())
+                .setName(source.getName())
                 .setHonour(source.getHonor())
                 .setOverallRank(source.getRanks().getOverall().getRank())
                 .setLanguageLevels(convertLanguages(source.getRanks().getLanguages()));
