@@ -21,6 +21,7 @@ public class UserDtoToProfileConverter implements Converter<UserDto, Profile> {
     public Profile convert(UserDto source) {
         return new Profile()
                 .setId(source.getUsername())
+                .setName(source.getName())
                 .setClan(source.getClan())
                 .setName(source.getName())
                 .setHonour(source.getHonor())
